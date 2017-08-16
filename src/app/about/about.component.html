@@ -10,7 +10,7 @@ fxLayoutGap="10px">
 </div>
 
 <div fxFlex>
- <h3>History</h3> 
+ <h2>History</h2> 
  <div fxLayout="column" fxLayout.gt-sm="row">
      <div fxFlex="100" fxFlexOffset="20px">
            <h4>Our Address</h4>
@@ -33,9 +33,9 @@ fxLayoutGap="10px">
    </div>
  </div>
 
- <div fxFlex="100">
-    <md-list>
-        <h3>Corporate Leadership</h3>
+ <div fxFlex>
+    <h2>Corporate Leadership</h2>
+    <md-list *ngIf="leaders">
         <md-list-item *ngFor="let leader of leaders">
             <img md-list-avatar src={{leader.image}} alt={{leader.name}}>
             <h4 md-line>{{ leader.name }} {{ leader.desig }}</h4>
@@ -43,6 +43,9 @@ fxLayoutGap="10px">
             <p md-line>{{ leader.introduction }} </p>
         </md-list-item>
     </md-list>
+    <div [hidden] ="leaders">
+            <md-spinner></md-spinner> <h4>Loading . . . Please Wait</h4>
+    </div>
   </div>
 </div>
 
