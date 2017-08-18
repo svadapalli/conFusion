@@ -4,7 +4,7 @@
 $lt-gray: #ddd;
 $background-dark: #0349ba;
 $background-light: #4286f4;
-$background-pale: #D1C4E9;
+$background-pale: #D7E8F9;
 $primary-color-dark:   #0349ba;
 $primary-color:        #4286f4;
 $primary-color-light:  #D1C4E9;
@@ -42,4 +42,11 @@ body{
 
 .flex-spacer {
   flex: 1 1 auto;
+}
+
+.highlight {
+    background-color: $background-pale;
+    border: 1px solid $primary-color;
+    z-index: 1;
+    transform: scale(1.01);
 }
